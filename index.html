@@ -377,7 +377,23 @@
           </div>
         </div>
 			
-	
+		<!-- The four columns -->
+		<div class="row">
+		  <div class="column">
+		    <img src="src="images/Splash_screen.png" alt="Nature" style="width:100%" onclick="myFunction(this);">
+		  </div>
+		  <div class="column">
+		    <img src="src="images/Splash_screen.png" alt="Snow" style="width:100%" onclick="myFunction(this);">
+		  </div>
+		
+		  </div>
+		</div>
+
+		<div class="container">
+		  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+		  <img id="expandedImg" style="width:100%">
+		  <div id="imgtext"></div>
+		</div>
     		<div class="row">
 					<div class="col-sm-4 text-center d-flex ftco-animate">
 						<a href="#" class="services-1 shadow">
@@ -818,6 +834,16 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+			  
+  <script>
+	function myFunction(imgs) {
+	  var expandImg = document.getElementById("expandedImg");
+	  var imgText = document.getElementById("imgtext");
+	  expandImg.src = imgs.src;
+	  imgText.innerHTML = imgs.alt;
+	  expandImg.parentElement.style.display = "block";
+	}
+</script>
     
   </body>
 </html>
